@@ -1,0 +1,13 @@
+header{
+    display: flex;
+    justify-content: space-between;
+}
+body{
+    background: linear-gradient(to bottom, lightpink, white);
+    background-repeat: no-repeat;
+    font-size: 30px;
+}
+
+html{
+    scroll-behavior: smooth;
+}

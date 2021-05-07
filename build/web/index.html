@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registro de Usuarios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./JS/P1.js"></script>
+        <link rel="stylesheet" href="./CSS/masterstyle.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class ="contenedorRegistro">
+                <label>Registrar Usuario </label>
+                <br>
+                <br>
+                <form method="post" name="formulario" action="Registro">
+                    <label>Nombre: </label>
+                    <br>
+                    <input type="text" name="nombre" onkeypress="return validarC(event)">
+                    <br>
+                    <label>Apellido paterno: </label>   
+                    <br>
+                    <input type="text" name="appat" onkeypress="return validarC(event)">
+                    <br>
+                    <label>Apellido materno: </label>
+                    <br>
+                    <input type="text" name="apmat" onkeypress="return validarC(event)">
+                    <br>
+                    <label>Edad: </label>
+                    <br>
+                    <input type="number" name="edad" onkeypress="return validarN(event)">
+                    <br>
+                    <label>Email: </label>
+                    <br>
+                    <input type="email" name="correo" onsubmit="return validarCorreo()">
+                    <br>
+                    <input type="submit" value="Registrar Usuario">
+                    <input type="reset" value="Borrar Datos">
+                </form>
+            </div>
+            <br>
+            <div class ="contenedorConsultar">
+                <br>
+                <form name="formularioConsultar" method="get" action="Consultar">
+                    <label>Consultar tabla de usuarios</label>
+                    <input type="submit" value="Consultar Tabla General de Usuarios">
+                </form>
+            </div>
+            <br>
+            <br>
+            <div class="contenedorEliminar">
+                <form name="formularioEliminar" method="post" action="Eliminar">
+                    <label>Ingresa el ID del usuario a eliminar</label>
+                    <input type="text" name="ideliminar" onkeypress="return validarN(event)">
+                    <input type="submit" value="Eliminar Registro">
+                </form>
+            </div>
+            <br>
+            <br>
+            <div class ="contenedorActualizar">
+                <form method="post" name="formularioActualizar" action="Actualizar">
+                    <label>Ingresa el ID del usuario a actualizar</label>
+                    <input type="text" name="ideliminar2" onkeypress="return validarN(event)">
+                    <br>
+                    <br>
+                    <label>Nombre: </label>
+                    <br>
+                    <input type="text" name="nombre2" onkeypress="return validarC(event)">
+                    <br>
+                    <label>Apellido paterno: </label>
+                    <br>
+                    <input type="text" name="appat2" onkeypress="return validarC(event)">
+                    <br>
+                    <label>Apellido materno: </label>
+                    <br>
+                    <input type="text" name="apmat2" onkeypress="return validarC(event)">
+                    <br>
+                    <label>Edad: </label>
+                    <br>
+                    <input type="number" name="edad2" onkeypress="return validarN(event)">
+                    <br>
+                    <label>Email: </label>
+                    <br>
+                    <input type="email" name="correo2" onsubmit="return validarCorreo()">
+                    <br>
+                    <input type="submit" value="Actualizar Usuario">
+                    <input type="reset" value="Borrar Datos">
+                </form>
+            </div>
+            <br>
+        </div>
+    </body>
+</html>
